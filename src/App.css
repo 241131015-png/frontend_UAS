@@ -1,0 +1,303 @@
+/* ================= RESET & BODY ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= HEADER FULL LAYAR ================= */
+.main-header {
+    width: 100%;
+    background-color: #6097bf;
+    padding: 16px 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: space-between; 
+    box-shadow: 0 2px 4px rgba(142, 127, 127, 0.1);
+}
+
+.main-header h1 {
+    margin: 0; 
+    color: white; 
+    font-size: 70px; 
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 200px; 
+}
+
+.main-header nav {
+    width: 100%;
+    margin-top: 10px; 
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px; 
+}
+
+.main-header nav a {
+    flex: 1; 
+    margin-left: 0; 
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ================= MAIN FULL LAYAR ================= */
+main {
+    width: 100%;
+    padding: 20px;
+    min-height: calc(100vh - 64px);
+}
+
+/* ================= PAGE CONTAINER FULL LAYAR ================= */
+.page-container {
+    width: 100%;
+    max-width: 100%;
+    background: rgb(90, 158, 180);
+    padding: 20px;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.page-container h1 {
+    margin-top: 0;
+    margin-bottom: 25px; 
+}
+
+/* ================= RESPONSIVE ================= */
+.page-container,
+.main-header,
+main {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding: 40px;
+    }
+}
+
+/* --- TEMA DEFAULT (LIGHT MODE) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #b9d1e1;
+    color: #343a40;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-header h1 a,
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-header nav a {
+    margin-left: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+.main-header nav a:hover {
+    background: rgba(5, 4, 4, 0.15);
+}
+
+/* ================= TODO (LIGHT MODE) ================= */
+.todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    width: 100%; 
+}
+
+.todo-input {
+    flex: 1; 
+    padding: 12px;
+    border: 2px solid #096769;
+    border-radius: 6px;
+    background: rgb(203, 218, 223);
+    color: #000000;
+}
+
+.btn-add {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #3498db; 
+    color: white;
+    padding: 10px 14px; 
+    border-radius: 8px; 
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-delete {
+    background-color: #e74c3c; 
+    color: white;
+    padding: 10px 14px; 
+    border-radius: 8px; 
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete:hover {
+    background-color: #c0392b; 
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.todo-actions {
+    display: flex; 
+    gap: 10px; 
+    margin-left: 15px; 
+    flex-shrink: 0; 
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #e0e8ec; 
+    border: 2px solid #09595f;
+    border-left: 5px solid #0c8b94;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* ================= FILTER ================= */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters .btn-clear {
+    margin-left: auto;
+    cursor: pointer;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+    background: #121212; 
+    color: #e0e0e0; 
+}
+
+body.dark .main-header {
+    background-color: #1f1f1f; 
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .main-header h1 a,
+body.dark .main-header nav a {
+    color: #e0e0e0;
+}
+
+body.dark .page-container {
+    background: #1e1e1e;
+}
+
+body.dark .todo-input {
+    background: #282828;
+    color: #e0e0e0;
+    border-color: #3a3a3a;
+}
+
+body.dark .todo-item {
+    background: #222222; 
+    border-left-color: #7b9cff;
+}
+
+body.dark .btn-add {
+    background: #00b386; 
+}
+
+body.dark .filters .btn-clear {
+    background: #b83226; 
+}
+
+.btn-theme-switch {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.2s;
+}
+
+.btn-theme-switch:hover {
+    background: rgba(244, 239, 239, 0.15);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.nav-btn {
+    height: 48px;               
+    width: 100%;                  
+    
+    display: flex;              
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 12px;             
+    border-radius: 999px;
+    border: none;
+
+    background: linear-gradient(135deg,#5fb0d8,#3a6ea5);
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+
+    box-shadow: 0 3px 6px rgba(0,0,0,.15);
+    transition: transform .15s, filter .2s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
