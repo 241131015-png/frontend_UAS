@@ -86,11 +86,76 @@ main {
     width: 100%;
 }
 
-@media (min-width: 768px) {
+/* =============== MOBILE LAYOUT (HP) =============== */
+@media (max-width: 768px) {
+
+    /* Header rapi di HP */
+    .main-header {
+        padding: 10px 12px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Judul tidak terlalu besar & tidak turun jauh */
+    .main-header h1 {
+        font-size: 28px;
+        margin-top: 0;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    /* Menu jadi kotak rapi sebaris */
+    .main-header nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 5px;
+    }
+
+    /* Semua tombol sama besar */
+    .main-header nav a {
+        margin: 0;
+        padding: 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* Konten tidak mepet tepi layar */
     main {
-        padding: 30px;
+        padding: 12px;
+    }
+
+    /* Card halaman rapi */
+    .page-container {
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    /* Form input todo ke bawah (tidak mendatar) */
+    .todo-form {
+        flex-direction: column;
+    }
+
+    .btn-add {
+        width: 100%;
+    }
+
+    /* Item todo tidak terlalu lebar */
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .todo-actions {
+        width: 100%;
+        justify-content: flex-end;
     }
 }
+
 
 @media (min-width: 1200px) {
     main {
@@ -301,3 +366,5 @@ body.dark .filters .btn-clear {
     transform: translateY(-2px);
     filter: brightness(1.1);
 }
+
+
