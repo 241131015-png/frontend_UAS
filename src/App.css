@@ -270,10 +270,37 @@ body {
     margin-bottom: 20px;
 }
 
+/* Style tombol filter */
+.filters button {
+    background: linear-gradient(135deg, #165374, #48c6ef);
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek hover */
+.filters button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+/* Tombol aktif (yang sedang dipilih) */
+.filters button.active {
+    background: linear-gradient(135deg, #2ad379, #80c78b);
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+
 .filters .btn-clear {
     margin-left: auto;
     cursor: pointer;
-    background: #e74c3c;
+    background: linear-gradient(135deg, #f00707, #db6363);
     color: white;
     border: none;
     padding: 8px 12px;
