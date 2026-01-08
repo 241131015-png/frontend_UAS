@@ -125,13 +125,13 @@ main {
 
     /* Konten tidak mepet tepi layar */
     main {
-        padding: 12px;
+        padding: 10px;
     }
 
     /* Card halaman rapi */
     .page-container {
         padding: 12px;
-        border-radius: 4px;
+        border-radius: 0px;
     }
 
     /* Form input todo ke bawah (tidak mendatar) */
